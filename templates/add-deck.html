@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{url_for('static', filename='asset/css/add-deck.css')}}" rel="stylesheet">
+
+
+  </head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+    <h1 class="logo me-auto"><a href="/">WYDE</a></h1>
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a href="/">Deck</a></li>
+        <li><a href="">Quiz</a></li>
+
+          <li class="dropdown"><a href=""><span>Add new</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="">Add Decks</a></li>
+              <li><a href="">Add Flashcards / Quiz Questions</a></li>
+
+            </ul>
+          </li>
+
+        <!--<li class="dropdown"><a href="#"><span>Classes</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="#">Drop Down 1</a></li>
+          </ul>-->
+        <li class="display">
+          <a id="imagess"><img src="{{url_for('static', filename='asset/images/images.png')}}"><p class="account text" style="font-size: 15px;">{{ student[1] }}</p></a>
+          <ul>
+            <li><a href="">Sign out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+
+  <div class="sign-up">
+    <h3>Add Deck</h3>
+    <form id="form" method="POST" action="/adddeck">
+      <label for="name">Name: </label><br>
+      <input type="text" id="name" name="name" size="33" autofocus required><br><br>
+
+      <label for="description">Description:</label><br>
+      <textarea name="description" id="description" cols="36" rows="4" required></textarea>
+
+      <div class="sign-up-2">
+        <input id="hello" type="submit" value="Add">
+      </div>
+
+    </form>
+    <p><span id='display'></span></p>
+  </div>
+
+
+
+</body>
+</html>

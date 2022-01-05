@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Web dev</title>
+
+  <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static', filename='asset/css/log-in.css')}}" rel="stylesheet">
+
+</head>
+<body>
+
+  <script>
+	function validate() {
+		var studlg = ["YONGLI01", "EUGEN02", "WENQI03", "DALBE04"]
+    var student = ["ONG YONG LIN", "EUGENIO MANASALA", "KOO WENQI", "DALBERT CHEA"]
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+
+		for(var i in studlg) {
+			if(username == studlg[i] && password == "Welcome@123") {
+        localStorage.setItem("username", student[i]);
+				window.location.href = "main-page.html";
+
+			}
+		}
+
+		document.getElementById("passwrong").innerHTML = "Invalid password OR username";
+
+		return false;
+	}
+  </script>
+
+
+
+  <div class="contain">
+    <div class="word">
+      <a href="../landing-page.html"><h1>Edu<span style="color:red;">Centre</span></h1></a>
+      <div class="log-head">
+        <img src="{{url_for('static', filename='asset/images/teacher.png')}}" width="80"><br><br>
+        <h4><pre>  <a href="#" style="color: red;">Student</a> / <a href="../teacher/teacher-log.html">Teacher</a></pre></h4>
+      </div>
+    </div>
+    <div class="log-in">
+      <form id="form" method="post" action="main-page.html" onsubmit="return false">
+      <label for="username">Username</label><br>
+      <input type="text" id="username" name="username" size="33" autofocus required><br><br>
+      <label for="pass">Password</label><br>
+      <input type="password" id="password" name="password" size="33" autofocus required><br>
+      <a href="">Forgot password</a>
+      <p id="passwrong"></p>
+      <div class="log-in-2">
+        <input id="hello" type="submit" value="Log In" onclick="validate()">
+      </div>
+      </form>
+    </div>
+    <div style="text-align:center">
+      <a href="#"><span class="dot" style="background-color: red;"></span></a>
+      <a href="sign-up.html"><span class="dot"></span></a>
+    </div>
+  </div>
+</body>
+</html>

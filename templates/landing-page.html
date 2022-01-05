@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Web dev</title>
+
+  <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static', filename='asset/css/landing-page.css')}}" rel="stylesheet">
+
+</head>
+<body>
+  <div class="contain">
+    <div class="split word">
+      <img id="pic1" src="{{url_for('static', filename='asset/images/bb1.png')}}"><br>
+      <img id="pic2" src="{{url_for('static', filename='asset/images/bb.png')}}">
+      <p>Online Learning made convenient<br><span id="word">By Students. For Students.<span></p>
+      <br><br><br><br>
+    </div>
+    <div class="split area">
+      <div class="student">
+        <p style="font-size: 24px;padding-top: 10px;">Welcome back Student<p><br>
+        <p>Please use your username and password to log in.<br>Register if you do not have an account<p><br>
+        <a href="{{ url_for('register') }}" id="log">Log In</a>
+        <a href="" id="sign">Sign Up</a>
+      </div><br><br>
+
+      <div class="teacher">
+        <p style="font-size: 24px;padding-top: 10px;">Welcome back Teacher<p><br>
+        <p>Please use your username and password to log in.<br>Register from centre if you do not have an account<p><br>
+        <a href="" id="log">Log In</a>
+      </div><br>
+
+    </div>
+  </div>
+</body>
+</html>

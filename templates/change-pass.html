@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Web dev</title>
+
+  <link href="../bootstrap.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../asset/css/change-pass.css" rel="stylesheet">
+  <script>
+  function register() {
+    var data = localStorage.getItem("accounts");
+    if(!data) {
+      data = '[]';
+      localStorage.setItem("accounts", "[]");
+    }
+
+    data = JSON.parse(data);
+
+    var logname = document.getElementById("username").value;
+    var username = document.getElementById("studname").value;
+    var password = document.getElementById("password").value;
+
+    data.push({"logname": logname, "username": username, "password": password});
+
+    localStorage.setItem("accounts", JSON.stringify(data));
+    localStorage.setItem("logname", logname);
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+    window.location.href = "form-result.html";
+  }
+  </script>
+
+</head>
+<body>
+  <script>
+  </script>
+  <div class="contain"><br>
+    <div class="word">
+      <img src="../asset/images/lock.png" width="80">
+      <h1>Change Password</h1>
+    </div>
+    <div class="sign-up">
+      <form id="form" method="post" action="main-page.html" onsubmit="return false">
+      <label for="studname">Username</label><br>
+      <input type="text" id="studname" name="studname" size="33" autofocus required><br><br>
+      <label for="pass">Current Password:</label><br>
+      <input type="password" id="password" name="password" size="33" autofocus required><br><br>
+      <label for="pass1">New Password:</label><br>
+      <input type="password" id="pass1" name="pass1" size="33" autofocus required><br><br>
+      <label for="pass2">Confirm New Password:</label><br>
+      <input type="password" id="pass2" name="pass2" size="33" autofocus required><br>
+      <p id="passwrong"></p><br>
+      <div class="sign-up-2">
+        <input id="hello" type="submit" value="Change Password" onclick="validate()">
+      </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

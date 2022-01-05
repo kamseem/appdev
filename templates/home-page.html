@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}EduCentre{% endblock %}
+
+{% block header %}
+  <link href="{{url_for('static', filename='asset/css/main-page.css')}}" rel="stylesheet">
+  <script type="text/javascript">
+  window.onload = function() {
+    if(localStorage.getItem("username")) {
+      document.getElementById("hello").innerText = localStorage.getItem("username");
+    }
+  }
+  </script>
+{% endblock %}
+
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 disp">
+          <h1 class="head1">Welcome,  <span id="hello" style="font-size: 32px; font-weight:bold;"></span>!</h1>
+        <div class="cardrow">
+          <button class="card" onclick="window.location.href='quiz.html'">
+            <img src="{{url_for('static', filename='asset/images/quiz.png')}}" height="45%" width="45%">
+            <h2>Quiz</h2>
+          </button>
+          <button class="card" onclick="window.location.href='cards.html">
+            <img src="{{url_for('static', filename='asset/images/leader.png')}}" height="45%" width="45%">
+            <h2>Leaderboard</h2>
+          </button>
+          <button class="card" onclick="window.location.href='cards.html">
+            <img src="{{url_for('static', filename='asset/images/speech.jpg')}}" height="45%" width="45%">
+            <h2>Forums</h2>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-4 announcement">
+        <h1 class="an">Announcement</h1>
+        <ul>
+          <li>Math Test on Week 9 (25%)</li>
+          <li>Python Quiz on week 10 Monday(10%)</li>
+          <li>Web Quiz MCQ on 2 Jan(20%)</li>
+          <li>Math Test 2 on Week 14 (25%)</li>
+          <li>Python Quiz 2 on week 14 Monday(10%)</li>
+          <li>Javascript Quiz 1 due week 13 (15%)</li>
+          <li>Web Quiz MCQ on 2 Jan(20%)</li>
+          <li>Release of CSS and HTML result on 10 Jan 2022, 11am</li>
+          <li>Release of Math result on 11 Jan 2022, 10am</li>
+          <li>Release of Javascript result on 11 Feb 2022, 10am</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="row row2">
+      <div class="col-9">
+        <h1>Courses</h1>
+      </div>
+      <div class="col-1">
+        <a href="courses.html" style="right: 0">See All</a>
+      </div>
+    </div>
+
+    <div class="row row3">
+      <div class="col-11">
+        <button class="card" onclick="window.location.href='python.html'">
+          <img src="{{url_for('static', filename='asset/images/py.png')}}" height="45%" width="45%" style="margin: 20px 15px 15px 10px">
+          <h2>Python</h2>
+        </button>
+        <button class="card" onclick="window.location.href='cards.html">
+          <img src="{{url_for('static', filename='asset/images/js.jpg')}}" height="53%" width="43%" style="margin: 20px 15px 15px 14px">
+          <h2>Javascript</h2>
+        </button>
+        <button class="card" onclick="window.location.href='cards.html">
+          <img src="{{url_for('static', filename='asset/images/html.png')}}" height="50%" width="45%" style="margin: 20px 15px 15px 14px">
+          <h2>HTML</h2>
+        </button>
+        <button class="card" onclick="window.location.href='cards.html">
+          <img src="{{url_for('static', filename='asset/images/css.png')}}" height="50%" width="50%" style="margin: 20px 15px 15px 14px">
+          <h2>CSS</h2>
+        </button>
+        <button class="card" onclick="window.location.href='cards.html">
+          <img src="{{url_for('static', filename='asset/images/bs.png')}}" height="58%" width="58%" style="margin: 20px 15px 15px 14px">
+          <h2>Bootstrap</h2>
+        </button>
+        <button class="card" onclick="window.location.href='cards.html">
+          <img src="{{url_for('static', filename='asset/images/biz.jpg')}}" height="65%" width="75%">
+          <h2>Math</h2>
+        </button>
+        <br><br>
+      </div>
+    </div>
+  </div>
+{% endblock %}

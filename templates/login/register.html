@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Web dev</title>
+
+  <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static', filename='asset/css/sign-up.css')}}" rel="stylesheet">
+
+</head>
+<body>
+  <div class="contain">
+ lll   <div class="word">
+      <a href="../landing-page.html"><h1>Edu<span style="color:red;">Centre</span></h1></a>
+      <div class="sign-head">
+        <img src="{{url_for('static', filename='asset/images/teacher.png')}}" width="80"><br><br>
+        <h4><pre>  <a href="#" style="color: red;">Student</a> / <a href="#">Teacher</a></pre></h4>
+      </div>
+    </div>
+    <div class="sign-up">
+      {% from "includes/_formHelper.html" import render_field %}
+      <form action="{{ url_for('register') }}" method="post" autocomplete="off">
+        <label for="name"></label>
+        <input type="text" name="name" placeholder="Student Name" id="name" required>
+        <label for="username"></label>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+        <label for="email"></label>
+        <input type="email" name="email" placeholder="Email" id="email" required>
+        <label for="password"></label>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <div class="msg">{{ msg }}</div>
+
+
+
+
+      <p id="passwrong"></p><br>
+      <div class="sign-up-2">
+        <input id="hello" type="submit" value="Sign up">
+      </div>
+      </form>
+    </div>
+    <div style="text-align:center">
+      <a href="/student"><span class="dot"></span></a>
+      <a href="/signup"><span class="dot" style="background-color: red;"></span></a>
+    </div>
+  </div>
+</body>
+</html>
