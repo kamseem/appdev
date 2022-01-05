@@ -1,0 +1,260 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+#header {
+  background-color: #3B3B3B;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 10px 0;
+  position: sticky;
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
+}
+
+#header.header-scrolled {
+  padding: 12px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: white;
+}
+
+
+#header .logo a span {
+  color: #e03a3c;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+.navbar {
+  padding-right: 50px;
+  color: red;
+}
+
+.navbar img {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+  color: white;
+}
+
+.account{
+  font-size: 20px;
+  margin: 0 20px 0 0;
+}
+
+.account:hover{
+  color: white;
+}
+
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #FF6865;
+}
+
+.navbar .dropdown ul, .navbar .display ul {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  background: #848484;
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li, .navbar .display ul li {
+  min-width: 200px;
+  color: white;
+}
+
+.navbar .dropdown ul a, .navbar .display ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.navbar .dropdown ul li:hover > a, .navbar .display ul li:hover > a{
+  color: lightgreen;
+}
+
+.navbar .dropdown:hover > ul,  .navbar .display:hover > ul{
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+#top-place {
+  width: 100%;
+  height: calc(100vh - 110px);
+  background: url("../images/pyth.png");
+  background-size: cover;
+  position: relative;
+}
+
+#top-place:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#top-place h1 {
+  margin: 0 0 10px 0;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#top-place .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 17px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+  width: 200px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+#top-place .btn-get-started:hover {
+  background: #cc1616;
+  border-color: #cc1616;
+}
+
+@media (min-width: 1024px) {
+  #top-place {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #top-place {
+    text-align: center;
+  }
+  #top-place .container {
+    padding-top: 40px;
+  }
+  #top-place h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+.container-fluid hr{
+  width:8%;
+}
+
+.container-fluid{
+  margin-left: 10%;
+  width: 77%;
+}
+
+
+.announcement, .overview{
+  position: relative;
+  display: inline-block;
+  margin: 30px 30px 30px 20px;
+  right: 0;
+  height: 260px;
+  border: 2px solid #9A9A9A;
+  border-radius: 10px;
+  overflow: auto;
+  background-color: #EBEBEB;
+}
+
+.overview{
+  margin-left: 160px;
+}
+
+.announcement{
+  margin-left: 50px;
+}
+
+.an{
+  position: sticky;
+  top: 0;
+  padding: 11px 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #B3B3B3;
+}
+
+.row img {
+  border-radius: 50%;
+  height: 120px;
+  width: 150px;
+}
+
+.row{
+  padding: 0px 140px;
+  margin-top: 30px;
+  border: 2px solid red;
+}
+
+.row .heading{
+  position: relative;
+  display: inline-block;
+}
